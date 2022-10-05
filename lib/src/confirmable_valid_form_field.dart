@@ -1,3 +1,7 @@
+// Copyright (c) 2022, Joseph.
+// All rights reserved. Use of this source code is governed by a
+// MIT license that can be found in the LICENSE file.
+
 import 'package:meta/meta.dart';
 
 import 'valid_form_field.dart';
