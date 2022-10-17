@@ -1,3 +1,9 @@
+## 0.3.1
+
+### fix
+
+- export `ValidTextInput`.
+
 ## 0.3.0
 
 ### Change

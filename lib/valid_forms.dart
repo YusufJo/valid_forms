@@ -8,3 +8,4 @@ export './src/valid_form.dart';
 export './src/valid_input.dart';
 export './src/confirmable_valid_input.dart';
 export './src/valid_input_validator.dart';
+export './src/valid_text_input.dart';
