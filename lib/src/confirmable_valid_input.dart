@@ -4,14 +4,14 @@
 
 import 'package:meta/meta.dart';
 
-import 'valid_form_field.dart';
+import 'valid_input.dart';
 
 /// a field to confirm the value of another field, and to be validated against
 /// zero or more validators.
-abstract class ConfirmableValidFormField<T1 extends ValidFormField<T1, V>,
-    T2 extends ValidFormField<T2, V>, V> extends ValidFormField<T1, V> {
+abstract class ConfirmableValidInput<T1 extends ValidInput<T1, V>,
+    T2 extends ValidInput<T2, V>, V> extends ValidInput<T1, V> {
   // coverage:ignore-start
-  ConfirmableValidFormField({
+  ConfirmableValidInput({
     required super.initial,
     required this.fieldToConfirm,
     required super.isRequired,

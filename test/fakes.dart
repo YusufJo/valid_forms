@@ -1,28 +1,28 @@
-import 'package:valid_forms/src/valid_field_validator.dart';
-import 'package:valid_forms/src/valid_form_field.dart';
-import 'package:valid_forms/src/valid_text_form_field.dart';
+import 'package:valid_forms/src/valid_input_validator.dart';
+import 'package:valid_forms/src/valid_input.dart';
+import 'package:valid_forms/src/valid_text_input.dart';
 
 class FakeNoValidatorsValidFormField
-    extends ValidFormField<FakeNoValidatorsValidFormField, String> {
+    extends ValidInput<FakeNoValidatorsValidFormField, String> {
   FakeNoValidatorsValidFormField({
     required super.initial,
     required super.isRequired,
   });
 
   @override
-  Iterable<ValidFieldValidator> get validators => [];
+  Iterable<ValidInputValidator> get validators => [];
 }
 
 class FakeSingleValidatorValidFormField
-    extends ValidFormField<FakeSingleValidatorValidFormField, String> {
+    extends ValidInput<FakeSingleValidatorValidFormField, String> {
   FakeSingleValidatorValidFormField({
     required super.initial,
     required super.isRequired,
   });
 
   @override
-  Iterable<ValidFieldValidator> get validators => [
-        ValidFieldValidator(
+  Iterable<ValidInputValidator> get validators => [
+        ValidInputValidator(
           predicate: () => value.length >= 3,
           invalidReason: 'should have at least 3 characters',
         ),
@@ -30,19 +30,19 @@ class FakeSingleValidatorValidFormField
 }
 
 class FakeMultiValidatorValidFormField
-    extends ValidFormField<FakeMultiValidatorValidFormField, String> {
+    extends ValidInput<FakeMultiValidatorValidFormField, String> {
   FakeMultiValidatorValidFormField({
     required super.initial,
     required super.isRequired,
   });
 
   @override
-  Iterable<ValidFieldValidator> get validators => [
-        ValidFieldValidator(
+  Iterable<ValidInputValidator> get validators => [
+        ValidInputValidator(
           predicate: () => value.length > 3,
           invalidReason: 'should have more than 3 characters',
         ),
-        ValidFieldValidator(
+        ValidInputValidator(
           predicate: () => value.length < 5,
           invalidReason: 'should have less than 5 characters',
         ),
@@ -50,7 +50,7 @@ class FakeMultiValidatorValidFormField
 }
 
 class FakeEmailAddressValidFormField
-    extends ValidFormField<FakeEmailAddressValidFormField, String> {
+    extends ValidInput<FakeEmailAddressValidFormField, String> {
   FakeEmailAddressValidFormField({
     required super.initial,
     required super.isRequired,
@@ -58,12 +58,12 @@ class FakeEmailAddressValidFormField
   });
 
   @override
-  Iterable<ValidFieldValidator> get validators => [
-        ValidFieldValidator(
+  Iterable<ValidInputValidator> get validators => [
+        ValidInputValidator(
           predicate: () => value.contains('@'),
           invalidReason: 'should contain @ symbol',
         ),
-        ValidFieldValidator(
+        ValidInputValidator(
           predicate: () => value.endsWith('.com'),
           invalidReason: 'should end with ".com" only',
         ),
@@ -71,7 +71,7 @@ class FakeEmailAddressValidFormField
 }
 
 class FakeValidTextFormField
-    extends ValidTextFormField<FakeValidTextFormField> {
+    extends ValidTextInput<FakeValidTextFormField> {
   FakeValidTextFormField({
     required super.initial,
     required super.isRequired,
@@ -79,5 +79,5 @@ class FakeValidTextFormField
   });
 
   @override
-  Iterable<ValidFieldValidator> get validators => [];
+  Iterable<ValidInputValidator> get validators => [];
 }

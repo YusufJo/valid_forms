@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/valid_text_form_field.dart';
+import 'package:valid_forms/src/valid_text_input.dart';
 
 import 'fakes.dart';
 
 void main() {
-  group('$ValidTextFormField', () {
+  group('$ValidTextInput', () {
     test('should clear whitespaces on updating if trimExtraWhitespaces is true',
         () {
       // arrange

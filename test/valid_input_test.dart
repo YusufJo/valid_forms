@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/valid_form_field.dart';
+import 'package:valid_forms/src/valid_input.dart';
 
 import 'fakes.dart';
 
 void main() {
-  group('$ValidFormField', () {
+  group('$ValidInput', () {
     test('should know its type', () {
       // arrange
       final sut = FakeSingleValidatorValidFormField(

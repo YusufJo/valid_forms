@@ -4,13 +4,13 @@
 
 import 'package:meta/meta.dart';
 import 'package:valid_forms/src/listenable.dart';
-import 'package:valid_forms/src/valid_form_field.dart';
+import 'package:valid_forms/src/valid_input.dart';
 
-import 'valid_field_validator.dart';
+import 'valid_input_validator.dart';
 
 /// a text field to be validated against zero or more validators.
-abstract class ValidTextFormField<T> extends ValidFormField<T, String> {
-  ValidTextFormField({
+abstract class ValidTextInput<T> extends ValidInput<T, String> {
+  ValidTextInput({
     required super.initial,
     required super.isRequired,
     this.trimExtraSpaces = true,

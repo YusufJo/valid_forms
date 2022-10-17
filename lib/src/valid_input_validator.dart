@@ -6,8 +6,8 @@ import 'package:meta/meta.dart';
 
 /// A validator that validates a field based on a condition.
 /// Has a [invalidReason] field that can be displayed when the field is invalid.
-class ValidFieldValidator {
-  const ValidFieldValidator({
+class ValidInputValidator {
+  const ValidInputValidator({
     required this.predicate,
     required this.invalidReason,
   });

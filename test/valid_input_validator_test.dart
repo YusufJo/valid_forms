@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/valid_field_validator.dart';
+import 'package:valid_forms/src/valid_input_validator.dart';
 
-class _FakeValidFieldValidator extends ValidFieldValidator {
+class _FakeValidFieldValidator extends ValidInputValidator {
   _FakeValidFieldValidator({
     required super.predicate,
     required super.invalidReason,
@@ -9,7 +9,7 @@ class _FakeValidFieldValidator extends ValidFieldValidator {
 }
 
 void main() {
-  group('$ValidFieldValidator', () {
+  group('$ValidInputValidator', () {
     test('should return predicate value on validation', () {
       // arrange
       bool predicate() => false;

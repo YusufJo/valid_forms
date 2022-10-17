@@ -6,7 +6,7 @@ import 'package:valid_forms/valid_forms.dart';
 
 import 'listenable.dart';
 
-import 'valid_form_field.dart';
+import 'valid_input.dart';
 
 /// A container for multiple fields that need validation.'
 ///
@@ -17,11 +17,11 @@ import 'valid_form_field.dart';
 /// a field of the same type more than once will throw an assertion error.
 class ValidForm extends Listenable {
   ValidForm({
-    required Iterable<ValidFormField> fields,
+    required Iterable<ValidInput> fields,
   }) {
     assert(fields.map((e) => e.type).toSet().length == fields.length,
         'fields contain more than one class of the same type');
-    _fields = <Object, ValidFormField>{
+    _fields = <Object, ValidInput>{
       for (final f in fields) f.type: f,
     };
     _requiredFieldsValidation = <Object, bool>{
@@ -32,7 +32,7 @@ class ValidForm extends Listenable {
   }
 
   /// all the fields of the form mapped to their types.
-  late final Map<Object, ValidFormField> _fields;
+  late final Map<Object, ValidInput> _fields;
 
   /// all the required fields of the form mapped to their types.
   late final Map<Object, bool> _requiredFieldsValidation;
