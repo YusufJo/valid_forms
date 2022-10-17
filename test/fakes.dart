@@ -1,5 +1,6 @@
 import 'package:valid_forms/src/valid_field_validator.dart';
 import 'package:valid_forms/src/valid_form_field.dart';
+import 'package:valid_forms/src/valid_text_form_field.dart';
 
 class FakeNoValidatorsValidFormField
     extends ValidFormField<FakeNoValidatorsValidFormField, String> {
@@ -67,4 +68,16 @@ class FakeEmailAddressValidFormField
           invalidReason: 'should end with ".com" only',
         ),
       ];
+}
+
+class FakeValidTextFormField
+    extends ValidTextFormField<FakeValidTextFormField> {
+  FakeValidTextFormField({
+    required super.initial,
+    required super.isRequired,
+    super.trimExtraSpaces,
+  });
+
+  @override
+  Iterable<ValidFieldValidator> get validators => [];
 }
