@@ -1,3 +1,9 @@
+## 0.4.0
+
+### Change
+
+- `ValidInputValidator --> InputValidator`.
+
 ## 0.3.1
 
 ### fix

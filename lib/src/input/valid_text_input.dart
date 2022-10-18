@@ -6,7 +6,7 @@ import 'package:meta/meta.dart';
 import 'package:valid_forms/src/core/listenable.dart';
 import 'package:valid_forms/src/input/valid_input.dart';
 
-import '../validator/valid_input_validator.dart';
+import '../validator/input_validator.dart';
 
 /// a text field to be validated against zero or more validators.
 abstract class ValidTextInput<T> extends ValidInput<T, String> {

@@ -5,7 +5,7 @@
 import 'package:meta/meta.dart';
 import 'package:valid_forms/src/core/listenable.dart';
 
-import '../validator/valid_input_validator.dart';
+import '../validator/input_validator.dart';
 
 /// a field to be validated against zero or more validators.
 abstract class ValidInput<T, V> extends Listenable {
@@ -28,7 +28,7 @@ abstract class ValidInput<T, V> extends Listenable {
   V get value => _value;
 
   /// a set of validators to be run on the value of this field.
-  Iterable<ValidInputValidator> get validators;
+  Iterable<InputValidator> get validators;
 
   /// determines wither the field is valid for all validators.
   @mustCallSuper

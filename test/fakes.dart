@@ -1,4 +1,4 @@
-import 'package:valid_forms/src/validator/valid_input_validator.dart';
+import 'package:valid_forms/src/validator/input_validator.dart';
 import 'package:valid_forms/src/input/valid_input.dart';
 import 'package:valid_forms/src/input/valid_text_input.dart';
 
@@ -10,7 +10,7 @@ class FakeNoValidatorsValidFormField
   });
 
   @override
-  Iterable<ValidInputValidator> get validators => [];
+  Iterable<InputValidator> get validators => [];
 }
 
 class FakeSingleValidatorValidFormField
@@ -21,8 +21,8 @@ class FakeSingleValidatorValidFormField
   });
 
   @override
-  Iterable<ValidInputValidator> get validators => [
-        ValidInputValidator(
+  Iterable<InputValidator> get validators => [
+        InputValidator(
           predicate: () => value.length >= 3,
           invalidReason: 'should have at least 3 characters',
         ),
@@ -37,12 +37,12 @@ class FakeMultiValidatorValidFormField
   });
 
   @override
-  Iterable<ValidInputValidator> get validators => [
-        ValidInputValidator(
+  Iterable<InputValidator> get validators => [
+        InputValidator(
           predicate: () => value.length > 3,
           invalidReason: 'should have more than 3 characters',
         ),
-        ValidInputValidator(
+        InputValidator(
           predicate: () => value.length < 5,
           invalidReason: 'should have less than 5 characters',
         ),
@@ -58,12 +58,12 @@ class FakeEmailAddressValidFormField
   });
 
   @override
-  Iterable<ValidInputValidator> get validators => [
-        ValidInputValidator(
+  Iterable<InputValidator> get validators => [
+        InputValidator(
           predicate: () => value.contains('@'),
           invalidReason: 'should contain @ symbol',
         ),
-        ValidInputValidator(
+        InputValidator(
           predicate: () => value.endsWith('.com'),
           invalidReason: 'should end with ".com" only',
         ),
@@ -79,5 +79,5 @@ class FakeValidTextFormField
   });
 
   @override
-  Iterable<ValidInputValidator> get validators => [];
+  Iterable<InputValidator> get validators => [];
 }
