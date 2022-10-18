@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/valid_input_validator.dart';
+import 'package:valid_forms/src/validator/valid_input_validator.dart';
 
 class _FakeValidFieldValidator extends ValidInputValidator {
   _FakeValidFieldValidator({

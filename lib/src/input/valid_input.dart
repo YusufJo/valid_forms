@@ -3,9 +3,9 @@
 // MIT license that can be found in the LICENSE file.
 
 import 'package:meta/meta.dart';
-import 'package:valid_forms/src/listenable.dart';
+import 'package:valid_forms/src/core/listenable.dart';
 
-import 'valid_input_validator.dart';
+import '../validator/valid_input_validator.dart';
 
 /// a field to be validated against zero or more validators.
 abstract class ValidInput<T, V> extends Listenable {

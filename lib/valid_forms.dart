@@ -4,8 +4,8 @@
 
 library valid_forms;
 
-export './src/valid_form.dart';
-export './src/valid_input.dart';
-export './src/confirmable_valid_input.dart';
-export './src/valid_input_validator.dart';
-export './src/valid_text_input.dart';
+export 'src/core/valid_form.dart';
+export './src/input/valid_input.dart';
+export './src/input/confirmable_valid_input.dart';
+export './src/input/valid_text_input.dart';
+export 'src/validator/valid_input_validator.dart';

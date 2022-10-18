@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/valid_input.dart';
+import 'package:valid_forms/src/input/valid_input.dart';
 
-import 'fakes.dart';
+import '../fakes.dart';
 
 void main() {
   group('$ValidInput', () {

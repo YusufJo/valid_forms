@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/listenable.dart';
+import 'package:valid_forms/src/core/listenable.dart';
 
 class _FakeListenable extends Listenable {}
 

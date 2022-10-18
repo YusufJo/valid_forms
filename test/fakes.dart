@@ -1,6 +1,6 @@
-import 'package:valid_forms/src/valid_input_validator.dart';
-import 'package:valid_forms/src/valid_input.dart';
-import 'package:valid_forms/src/valid_text_input.dart';
+import 'package:valid_forms/src/validator/valid_input_validator.dart';
+import 'package:valid_forms/src/input/valid_input.dart';
+import 'package:valid_forms/src/input/valid_text_input.dart';
 
 class FakeNoValidatorsValidFormField
     extends ValidInput<FakeNoValidatorsValidFormField, String> {
