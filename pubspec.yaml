@@ -1,6 +1,6 @@
 name: valid_forms
 description: A simple form validation helper.
-version: 0.3.1
+version: 0.6.0
 publish_to: none
 
 environment:

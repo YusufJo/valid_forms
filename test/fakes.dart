@@ -70,8 +70,7 @@ class FakeEmailAddressValidFormField
       ];
 }
 
-class FakeValidTextFormField
-    extends ValidTextInput<FakeValidTextFormField> {
+class FakeValidTextFormField extends ValidTextInput<FakeValidTextFormField> {
   FakeValidTextFormField({
     required super.initial,
     required super.isRequired,

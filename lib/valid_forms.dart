@@ -9,3 +9,5 @@ export './src/input/valid_input.dart';
 export './src/input/confirmable_valid_input.dart';
 export './src/input/valid_text_input.dart';
 export 'src/validator/input_validator.dart';
+export 'src/validator/phone_number/fixed_line_number_validator.dart';
+export 'src/validator/phone_number/mobile_number_validator.dart';
