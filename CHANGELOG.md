@@ -1,3 +1,10 @@
+## 0.6.0
+
+### Add
+
+- Fixed line phone number validators. `FixedLineNumberValidator`
+- Mobile phone number validators. `MobileNumberValidator`
+
 ## 0.4.0
 
 ### Change
