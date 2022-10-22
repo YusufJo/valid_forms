@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:valid_forms/src/input/valid_input.dart';
+import 'package:valid_forms/src/input/core/valid_input.dart';
 
 import '../fakes.dart';
 

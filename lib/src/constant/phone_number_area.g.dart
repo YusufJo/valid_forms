@@ -762,7 +762,7 @@ final Map<String, RegExp> _mobilePatterns = {
   'zimbabwe': RegExp(r"^\+263(?:0?7(?:[178]\d|3[1-9])\d{6})$")
 };
 
-enum InternationalPhoneNumber {
+enum PhoneNumberArea {
   afghanistan,
   alandIslands,
   albania,

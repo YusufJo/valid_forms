@@ -4,16 +4,18 @@
 
 import 'package:meta/meta.dart';
 
+import '../../predicate/core/validation_predicate.dart';
+
 /// A validator that validates a field based on a condition.
 /// Has a [invalidReason] field that can be displayed when the field is invalid.
-class InputValidator {
+abstract class InputValidator {
   const InputValidator({
     required this.predicate,
     required this.invalidReason,
   });
 
   /// boolean callback to determine the validity of a field value.
-  final bool Function() predicate;
+  final ValidationPredicate predicate;
 
   /// description of why this validator might invalidate a value.
   final String invalidReason;

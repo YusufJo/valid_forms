@@ -151,7 +151,7 @@ class SourceCodeGenerator {
     mobilePatternGetter.body = Code('_mobilePatterns[name]');
 
     final enumClass = EnumBuilder();
-    enumClass.name = 'InternationalPhoneNumber';
+    enumClass.name = 'PhoneNumberArea';
     enumClass.values.addAll(enumValues);
     enumClass.values.sort((f, s) => f.name.compareTo(s.name));
     enumClass.methods.add(fixedLinePatternGetter.build());

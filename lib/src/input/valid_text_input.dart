@@ -3,7 +3,7 @@
 // MIT license that can be found in the LICENSE file.
 
 import 'package:meta/meta.dart';
-import 'package:valid_forms/src/input/valid_input.dart';
+import 'package:valid_forms/src/input/core/valid_input.dart';
 
 /// a text field to be validated against zero or more validators.
 abstract class ValidTextInput<T> extends ValidInput<T, String> {

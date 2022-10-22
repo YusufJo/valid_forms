@@ -1,6 +1,8 @@
-import 'package:valid_forms/src/validator/input_validator.dart';
-import 'package:valid_forms/src/input/valid_input.dart';
+import 'package:valid_forms/src/predicate/custom_validation_predicate.dart';
+import 'package:valid_forms/src/validator/core/input_validator.dart';
+import 'package:valid_forms/src/input/core/valid_input.dart';
 import 'package:valid_forms/src/input/valid_text_input.dart';
+import 'package:valid_forms/src/validator/custom_input_validator.dart';
 
 class FakeNoValidatorsValidFormField
     extends ValidInput<FakeNoValidatorsValidFormField, String> {
@@ -22,8 +24,8 @@ class FakeSingleValidatorValidFormField
 
   @override
   Iterable<InputValidator> get validators => [
-        InputValidator(
-          predicate: () => value.length >= 3,
+        CustomInputValidator(
+          predicate: CustomValidationPredicate(() => value.length >= 3),
           invalidReason: 'should have at least 3 characters',
         ),
       ];
@@ -38,12 +40,12 @@ class FakeMultiValidatorValidFormField
 
   @override
   Iterable<InputValidator> get validators => [
-        InputValidator(
-          predicate: () => value.length > 3,
+        CustomInputValidator(
+          predicate: CustomValidationPredicate(() => value.length > 3),
           invalidReason: 'should have more than 3 characters',
         ),
-        InputValidator(
-          predicate: () => value.length < 5,
+        CustomInputValidator(
+          predicate: CustomValidationPredicate(() => value.length < 5),
           invalidReason: 'should have less than 5 characters',
         ),
       ];
@@ -59,12 +61,12 @@ class FakeEmailAddressValidFormField
 
   @override
   Iterable<InputValidator> get validators => [
-        InputValidator(
-          predicate: () => value.contains('@'),
+        CustomInputValidator(
+          predicate: CustomValidationPredicate(() => value.contains('@')),
           invalidReason: 'should contain @ symbol',
         ),
-        InputValidator(
-          predicate: () => value.endsWith('.com'),
+        CustomInputValidator(
+          predicate: CustomValidationPredicate(() => value.endsWith('.com')),
           invalidReason: 'should end with ".com" only',
         ),
       ];

@@ -1,3 +1,18 @@
+## 0.7.0
+
+### Add
+
+- `CustomValidationPredicate`.
+- `FixedLineNumberValidationPredicate`.
+- `MobileNumberValidationPredicate`.
+- `FixedLineNumberInputValidator`.
+- `MobileNumberInputValidator`.
+
+### Change
+
+- `InternationalPhoneNumber --> PhoneNumberArea`
+- `InputValidator --> CustomInputValidator`
+
 ## 0.6.0
 
 ### Add

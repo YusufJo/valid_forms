@@ -4,7 +4,7 @@
 
 import 'package:meta/meta.dart';
 
-import 'valid_input.dart';
+import 'core/valid_input.dart';
 
 /// a field to confirm the value of another field, and to be validated against
 /// zero or more validators.

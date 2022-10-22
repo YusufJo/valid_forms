@@ -6,7 +6,7 @@ import 'package:valid_forms/valid_forms.dart';
 
 import 'listenable.dart';
 
-import '../input/valid_input.dart';
+import '../input/core/valid_input.dart';
 
 /// A container for multiple fields that need validation.'
 ///
