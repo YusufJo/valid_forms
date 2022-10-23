@@ -15,5 +15,3 @@ export './src/predicate/fixed_line_number_validation_predicate.dart';
 export './src/predicate/mobile_number_validation_predicate.dart';
 export './src/validator/core/input_validator.dart';
 export './src/validator/custom_input_validator.dart';
-export './src/validator/fixed_line_number_input_validator.dart';
-export './src/validator/mobile_number_input_validator.dart';

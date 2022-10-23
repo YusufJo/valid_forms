@@ -1,3 +1,10 @@
+## 0.8.0
+
+### Remove
+
+- `FixedLineNumberInputValidator`.
+- `MobileNumberInputValidator`.
+
 ## 0.7.0
 
 ### Add
