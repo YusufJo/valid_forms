@@ -2,8 +2,6 @@
 // All rights reserved. Use of this source code is governed by a
 // MIT license that can be found in the LICENSE file.
 
-import '../service/normalizer.dart';
-
 class Territory {
   const Territory({
     required this.name,
@@ -24,7 +22,7 @@ class Territory {
 
   factory Territory.fromMap(Map<String, dynamic> map) {
     return Territory(
-      name: _nameParser(map: map),
+      name: map['id'] as String,
       countryCode: map['countryCode'] as String,
       nationalPrefix: map['nationalPrefix'] as String?,
       fixedLinePattern: _patternParser(key: 'fixedLine', map: map) as String,
@@ -44,12 +42,5 @@ class Territory {
     return rawPattern
         .replaceAll(_newLinePattern, '')
         .replaceAll(_spacesPattern, '');
-  }
-
-  static String _nameParser({required final Map<String, dynamic> map}) {
-    final id = map['id'] as String;
-    final code = map['countryCode'] as String;
-    final normalizer = CountryNameNormalizer();
-    return normalizer(id: id, code: code);
   }
 }

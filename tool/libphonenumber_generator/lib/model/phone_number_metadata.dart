@@ -7,18 +7,6 @@ import 'territory.dart';
 class PhoneNumberMetadata {
   const PhoneNumberMetadata({required this.territories});
 
-  static const _excludedCodes = [
-    '800',
-    '808',
-    '870',
-    '878',
-    '881',
-    '882',
-    '883',
-    '888',
-    '979'
-  ];
-
   final List<Territory> territories;
 
   factory PhoneNumberMetadata.fromMap(Map<String, dynamic> map) {
@@ -29,8 +17,8 @@ class PhoneNumberMetadata {
     final territories =
         List<Map<String, dynamic>>.from(territoriesMap['territory'])
             .where((value) {
-      final code = value['countryCode'] as String;
-      return !_excludedCodes.contains(code);
+      final id = value['id'] as String;
+      return id != '001';
     }).map(Territory.fromMap);
 
     return PhoneNumberMetadata(

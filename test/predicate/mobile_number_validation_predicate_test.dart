@@ -7,8 +7,8 @@ void main() {
     group('$SomeMobileNumberValidationPredicate', () {
       test('should accept allowed numbers only', () {
         const allowedAreas = [
-          PhoneNumberArea.unitedStates,
-          PhoneNumberArea.egypt,
+          PhoneNumberArea.US,
+          PhoneNumberArea.EG,
         ];
 
         final sut1 = SomeMobileNumberValidationPredicate(
@@ -39,7 +39,7 @@ void main() {
 
     group('$AllMobileNumberValidationPredicate', () {
       test('should accept all numbers except blocked numbers', () {
-        const forbiddenAreas = [PhoneNumberArea.egypt];
+        const forbiddenAreas = [PhoneNumberArea.EG];
 
         final sut1 = AllMobileNumberValidationPredicate(
           mobileNumber: '+12015550123',

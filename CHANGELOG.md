@@ -1,3 +1,9 @@
+## 0.9.0
+
+### Change
+
+- `PhoneNumberArea` enum name from full name to iso2.  
+
 ## 0.8.0
 
 ### Remove
